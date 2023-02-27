@@ -1,0 +1,161 @@
+
+
+                                SQL
+
+
+                      Structured Query Language           -->sorgula
+                      Yapilandirilmis Sorgu Dili          -->güncelle
+                                                          -->sil
+                                                          -->veri ekle
+
+
+  SQL:Database'deki verileri sorgulamak, guncellemek, silmek veya
+      yeni veri eklemek icin kullanilan bir dildir
+      Butun veriler tablolarda saklanir
+
+  SQL KOMUTLARI:
+        1.)Data Definition Language (veri tanimlama dili)
+           Create: Tablo olustur
+           Drop:Tabloyu siler
+           Alter:Tabloyu gunceller
+
+        2.)Data Manipulatıon Language (veri kullanma dili)
+           Insert:Tabloya veri ekler
+           Ddelete:Tablodaki verileri siler
+           Uptade:Tablodaki verileri gunceller
+
+        3.)Data Query Language (veri sorgulama dili)
+           Select:Tablodaki verileri listeler
+
+        4.)Data Control Language (veri kontrol dili)
+           Grant:Bir kullaniciya yetki vermek icin kullanilir
+           Revoke:Bir kullaniciya verilen yetkiyi geri almak icin kullanilir
+
+
+
+
+  SQL DATA TURLERİ
+
+  String Data Turleri: Char(size):uzunlugu belli olan string datalar icin kullanılır
+                       varchar(size):uzunlugu belli olmayan string datalar icin kullanilir
+
+  Numeric Data Turleri:Numeric(p,s) p--> sayida kullanilan rakamlarin miktarini gosterir
+                                    s--> ondalik kisimda kullanilan rakamlarin miktarini gosterir
+
+                       Int:alacagi deger bellidir
+                       Real:ondalikli sayilar icin kullanilir
+
+  Date Data Turu: Date:tablodaki sutunlara tarih depolamak icin kullanilir
+                  Yil,AY,Gun icerir-->YYYY-MM-dd(standart formati)
+
+
+
+                       CONSTRAINT(Kisitlamalar):
+
+   UNIQUE-->verilerin benzersiz olmasidir
+
+   NOT NULL-->tum verilerin null icermemesidir
+              bu kisitlama icin constraint ismi tanimlanamaz
+              data turunden hemen sonra yazilir
+
+   CHECK-->bir sutuna yerlestirilebilecek deger araligini sinirlar
+
+   FOREIGN KEY--> baska bir tablodaki Primary Key'i referans gostermek
+                  icin kullanilir,boylelikle tablolar arasinda iliski kurulmus olur
+              --> tekrarli degerler icerebilir
+              --> null deger kabul eder
+              --> bir tabloda birden fazla Foreign Key olabilir
+              --> tablolar arasinda "child table" ve "parent table" vardir
+              --> child table(foreign key),parent table(primary key)
+
+   PRIMARIY KEY--> tum verilerin BENZERSIZ olmasi NULL icermemesidir (unique+not null)
+               --> bir veriyi kullanarak sadece bir kisiye ulasmak istiyorsak o zaman kullanilir
+               --> her tabloda Primary Key olmasi zorunlu degildir
+               --> bir tabloda en fazla bir tane Primary Key kullanabilirsiniz
+               --> tek basina bir sutun Primary Key olma ozelligini tasimiyorsa, bu ozelligi
+               elde etmek icin iki sutun birlestirilerek bir Primary Key olusturulabilir
+               (Composite Key)
+               --> primary key dıs dunyadaki gercek verileri iceriyorsa NatureL Key deriz
+               --> primary key dıs dunyadaki gercek verileri icermiyorsa Surrogate Key deriz
+
+
+
+   İLİSKİLİ TABLOLARLA CALİSMA:  Bire Bir İliskili Olma--> one to one relation
+                                 Bire Cok İliskili olma--> one to many relation
+                                 Coktan Coka Iliskili olma--> many to many relation
+
+
+
+
+
+
+  SQL'de butun veriler tablolarda saklanir
+  Row(Record): Tablonun her bir satirina denir
+  Column(Ffield): Tablonun her bir sutununa denir
+  *****.Satir isimleri veridir ama sutun isimleri veri degildir
+  *****.Sutun basliklari veri degildir
+  *****.Ssutun basliklerinin altindaki satirlar veridir
+
+
+
+
+  İLİSKİLİ TABLOLAR --> Relational Databases
+                    -->tablolarin ve iliskierin butunune SCHEMA(sema) denir
+                    -->tablolar arasi iliskiler net olmalidir
+                    -->tablolar arasi gecis kolay olmalidir
+
+
+
+
+  DATABASE: Birbiri ile iliskili verilerin bir arada bulundugu yere denir
+            Bulut sistemi de bir database'dir.Buyuk sirketler verilerini bulutta saklarlar
+            İnsan beyni,telefon rehberi,bulut sistemleri vb.
+            Bir kagit parcasiyla baslayip bulut sistemine kadar ilerleme gostermistir
+            yani dijitallesmistir
+
+            --> Database ile yazdigimiz verileri sql ile sorgulayabilecegiz
+            --> Sql,Selenium,Apı <==> FULL STACK TEST AUTOMATİON ENGİNEER
+
+
+
+
+  END To END (E2E) Testing:Database'de veriyi Selenium,Sql,Api ile olusturmus
+                           olsamda yine ayni sakilde hepsini Selenium,Sql,Api ile
+                           test edebilirim
+
+
+
+  DİJİTAL DATABASE'nin AVANTAJLARİ:Yuksek miktarda bilgi depolanabilir
+
+                                   Giris kolaydır
+                                   Create:olusturma
+                                   Read:okuma
+                                   Uptade:degistirme
+                                   Delete:silme kolayligi saglar
+
+                                   Dataya ulasim kolaydir
+                                   Guvenlidir(sifreyle erisim saglanir)
+
+
+
+  BULUT SİSTEM: Hafizasi yuksek bilgisayarlarda yıksek hafizali bilgilerin tutulmasidir
+                Amazonun insanlara sunmus oldugu bulut sistemi gibi.
+
+
+
+  Database Management System (DBMS):Veri Tabani Yonelim Sistemi
+                                    Database'e erisimi duzenler
+                                    Data guvenligini saglar
+                                    Create,Read,Uptade,Delete islemlerini duzenler
+                                    Database'den rapor alir
+                                    Bunlarin hepsini kod satirlariyla yapariz
+                                    PG admint te bir DBMS dir
+
+
+
+En Cok Kullanilan DBMS'ler: SQL Server
+                            MySQL
+                            Oracle SQL
+                            PostgreSQL
+
+
