@@ -21,7 +21,7 @@
 
         2.)Data Manipulatıon Language (veri kullanma dili)
            Insert:Tabloya veri ekler
-           Ddelete:Tablodaki verileri siler
+           Delete:Tablodaki verileri siler
            Uptade:Tablodaki verileri gunceller
 
         3.)Data Query Language (veri sorgulama dili)
