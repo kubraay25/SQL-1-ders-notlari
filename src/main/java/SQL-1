@@ -1,8 +1,7 @@
 
 
                                 SQL
-
-
+                      (sitrakçırd kuery lenguıç)
                       Structured Query Language           -->sorgula
                       Yapilandirilmis Sorgu Dili          -->güncelle
                                                           -->sil
@@ -14,6 +13,8 @@
       Butun veriler tablolarda saklanir
 
   SQL KOMUTLARI:
+
+          (deyda defınişın lenguıç)
         1.)Data Definition Language (veri tanimlama dili)
            Create: Tablo olustur
            Drop:Tabloyu siler
@@ -50,7 +51,7 @@
 
 
 
-                       CONSTRAINT(Kisitlamalar):
+                       CONSTRAINT:keynstreit(Kisitlamalar):
 
    UNIQUE-->verilerin benzersiz olmasidir
 
@@ -58,10 +59,11 @@
               bu kisitlama icin constraint ismi tanimlanamaz
               data turunden hemen sonra yazilir
 
-   CHECK-->bir sutuna yerlestirilebilecek deger araligini sinirlar
+   CHECK--> (kontrol etmek)bir sutuna yerlestirilebilecek deger araligini sinirlar
 
-   FOREIGN KEY--> baska bir tablodaki Primary Key'i referans gostermek
-                  icin kullanilir,boylelikle tablolar arasinda iliski kurulmus olur
+   FOREIGN KEY--> yabanci anahtar
+              --> baska bir tablodaki Primary Key'i referans gostermek
+   (forın)        icin kullanilir,boylelikle tablolar arasinda iliski kurulmus olur
               --> tekrarli degerler icerebilir
               --> null deger kabul eder
               --> bir tabloda birden fazla Foreign Key olabilir
@@ -69,14 +71,14 @@
               --> child table(foreign key),parent table(primary key)
 
    PRIMARIY KEY--> tum verilerin BENZERSIZ olmasi NULL icermemesidir (unique+not null)
-               --> bir veriyi kullanarak sadece bir kisiye ulasmak istiyorsak o zaman kullanilir
+   (praymeri)  --> bir veriyi kullanarak sadece bir kisiye ulasmak istiyorsak o zaman kullanilir
                --> her tabloda Primary Key olmasi zorunlu degildir
                --> bir tabloda en fazla bir tane Primary Key kullanabilirsiniz
                --> tek basina bir sutun Primary Key olma ozelligini tasimiyorsa, bu ozelligi
                elde etmek icin iki sutun birlestirilerek bir Primary Key olusturulabilir
-               (Composite Key)
+               (Composite Key):(kımpasit)-->bileşik anahtar
                --> primary key dıs dunyadaki gercek verileri iceriyorsa NatureL Key deriz
-               --> primary key dıs dunyadaki gercek verileri icermiyorsa Surrogate Key deriz
+               --> primary key dıs dunyadaki gercek verileri icermiyorsa Surrogate:surroget(vekil) Key deriz
 
 
 
@@ -91,18 +93,18 @@
 
   SQL'de butun veriler tablolarda saklanir
   Row(Record): Tablonun her bir satirina denir
-  Column(Ffield): Tablonun her bir sutununa denir
+  Column(field): Tablonun her bir sutununa denir
   *****.Satir isimleri veridir ama sutun isimleri veri degildir
   *****.Sutun basliklari veri degildir
-  *****.Ssutun basliklerinin altindaki satirlar veridir
+  *****.Sutun basliklerinin altindaki satirlar veridir
 
 
 
 
   İLİSKİLİ TABLOLAR --> Relational Databases
-                    -->tablolarin ve iliskierin butunune SCHEMA(sema) denir
-                    -->tablolar arasi iliskiler net olmalidir
-                    -->tablolar arasi gecis kolay olmalidir
+                    --> tablolarin ve iliskierin butunune SCHEMA(sema) denir
+                    --> tablolar arasi iliskiler net olmalidir
+                    --> tablolar arasi gecis kolay olmalidir
 
 
 
@@ -120,7 +122,7 @@
 
 
   END To END (E2E) Testing:Database'de veriyi Selenium,Sql,Api ile olusturmus
-                           olsamda yine ayni sakilde hepsini Selenium,Sql,Api ile
+                           olsamda yine ayni sekilde hepsini Selenium,Sql,Api ile
                            test edebilirim
 
 
@@ -138,7 +140,7 @@
 
 
 
-  BULUT SİSTEM: Hafizasi yuksek bilgisayarlarda yıksek hafizali bilgilerin tutulmasidir
+  BULUT SİSTEM: Hafizasi yuksek bilgisayarlarda yuksek hafizali bilgilerin tutulmasidir
                 Amazonun insanlara sunmus oldugu bulut sistemi gibi.
 
 
@@ -149,7 +151,7 @@
                                     Create,Read,Uptade,Delete islemlerini duzenler
                                     Database'den rapor alir
                                     Bunlarin hepsini kod satirlariyla yapariz
-                                    PG admint te bir DBMS dir
+                                    pgADMİN'de bir DBMS dir
 
 
 
