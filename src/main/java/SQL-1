@@ -161,3 +161,11 @@ En Cok Kullanilan DBMS'ler: SQL Server
                             PostgreSQL
 
 
+where--> sart belirtmemiz gerektiginde kullanirim (sartim var)
+
+in --> Birden fazla ifade ile tanımlayabilecegimiz durumları "in" komutu ile yazabiliriz
+   --> in(istenilen degerleri aralarina virgul koyarak yazarim)
+
+not in --> not in komutu yazdıgımız verilerin, dısındaki verileri listeler
+
+BETWEEN --> Belirttigimiz iki veri arasındaki bilgileri BETWEEN komutu ile yazabiliriz.
