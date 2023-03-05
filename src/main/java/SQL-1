@@ -163,9 +163,77 @@ En Cok Kullanilan DBMS'ler: SQL Server
 
 where--> sart belirtmemiz gerektiginde kullanirim (sartim var)
 
+
+
 in --> Birden fazla ifade ile tanımlayabilecegimiz durumları "in" komutu ile yazabiliriz
    --> in(istenilen degerleri aralarina virgul koyarak yazarim)
 
+
+
 not in --> not in komutu yazdıgımız verilerin, dısındaki verileri listeler
 
+
+
 BETWEEN --> Belirttigimiz iki veri arasındaki bilgileri BETWEEN komutu ile yazabiliriz.
+
+
+
+
+DML Grubundan ==> DELETE komutu Tablodaki Verileri Siler.
+--olusturacagimiz yapi asagidaki gibidir
+delete from tablo_adi where şart;
+
+
+
+
+set --> guncelleme yaptigimda kullanirim
+
+
+
+add column ==> yeni sutun ekleyerek tabloda güncellemeler yapar
+
+drop column ==> mevcut olan sutunu silerek tabloda güncellemeler yapar
+
+rename column ==> sutunun ismini degistirerek tabloda güncellemeler yapar
+
+rename ==> tablonun ismini degistirerek tabloda güncellemeler yapar
+
+
+
+
+
+       ********************************* ornek gosterimler *********************************************
+
+--> olusturdugum tabloya elemanlari ekleme:
+"insert" "into" "tablo adi" "values" (satirdaki verileri aralarinda virgul olacak sekilde tek tek girerim);
+
+
+
+--> eklenen tüm elemanlari listele:
+select * from "tablo adi":
+
+
+--> bir tabloda birden fazla drumu silmek istedigimizde:
+delete from "tablo adi" where neyi sileceksek onun adi in(degerleri arasina virgul koyarak yazarim);
+
+
+
+--> veya:"or",  ve:"and" kullaniriz
+
+
+--> tabloyu sil dediginde
+drop table "tablo adi"
+
+
+--> tabloda güncelleme yapacaksam
+update
+tablo adi
+set
+neyi degistireceksem onun ismi
+yerine yazacagim sey
+sartim varsa where
+sartim
+
+
+--> tabloda guncelleme
+alter table tablo_adi güncelleme;
