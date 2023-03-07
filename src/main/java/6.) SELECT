@@ -1,0 +1,54 @@
+/*=====================================SELECT=======================================================
+select * from tablo_adi ==> * Tüm sutunlardaki verileri listeler
+
+DQL Grubundan ==> SELECT komutu ile 'Tablodaki İstedigimiz Sütundaki Verileri Listeleyebiliriz'
+
+Syntax:
+-------
+
+select sutun_adi from tablo_adi; ==> Sadece belirtilen sutundaki verileri listeler
+
+========================================================================================================*/
+
+
+
+create table ogrenciler
+(
+id int,
+isim varchar(40),
+adres varchar(100),
+sinav_notu int
+);
+
+insert into ogrenciler values(120, 'Ali Can', 'Ankara', 75);
+insert into ogrenciler values(121, 'Veli Mert', 'Trabzon', 85);
+insert into ogrenciler values(122, 'Ayşe Tan', 'Bursa', 65);
+insert into ogrenciler values(123, 'Derya Soylu', 'Istanbul', 95);
+insert into ogrenciler values(124, 'Yavuz Bal', 'Ankara', 85);
+insert into ogrenciler values(125, 'Emre Gül', 'Hatay', 90);
+insert into ogrenciler values(126, 'Harun Reşit', 'Isparta', 100);
+
+
+
+--SORU1: ogrenciler tablosunun tum sutunlarındaki verileri listeleyiniz
+select * from ogrenciler;
+
+
+--SORU2: ogrenciler tablosundaki 'isim' sutunundaki verileri listeleyiniz
+select isim from ogrenciler;
+
+
+--SORU3: ogrenciler tablosundaki 'adres' sutunundaki verileri listeleyiniz
+select adres from ogrenciler;
+
+
+--SORU4: ogrenciler tablosundaki 'sinav_notu' sutunundaki verileri listeleyiniz
+select sinav_notu from ogrenciler;
+
+
+--SORU5: ogrenciler tablosundaki 'isim' ve 'sinav_notu' sutunundaki verileri listeleyiniz
+-- sutun isimlerini yazarken tirnak kullanmayiz
+-- birden fazla sutun ismindeki verileri sirala dediginde sutun isimlerini yazar sadece aralarina virgul koyariz
+select isim, sinav_notu from ogrenciler;
+
+

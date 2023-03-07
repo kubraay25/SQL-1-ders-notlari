@@ -15,10 +15,11 @@
 
 
 
-
+**************************************
 -- TALEBELER ISMINDE TABLO OLUSTURALIM
 
 -- "create" komutuyla tablo olustururum
+
 -- hangi tabloyu olusturursam olusturayim "create table" ile baslarim
 -- tablo ismini olusturduktan sonra parantez acarim
 -- parantezin icine tabloda olusturacagim sutunlarin isismlerini alt alta sirayla koyacagim
@@ -43,8 +44,9 @@ kayit_tarihi date
 
 
 
-
+**********************************************
 -- TALEBELER TABLOSUNDAKİ VERİLERİ LİSTELEYELİM
+
 -- "select" komutu tablodaki verileri listeler
 -- "*" butun sutunlardaki veriler anlamina gelir
 -- "from" dan den eki: talebeler tablosun"dan"
@@ -52,8 +54,9 @@ kayit_tarihi date
 select * from talebeler;
 
 
-
+*************************************
 -- TALEBELER TABLOSUNA VERİ EKLEYELİM
+
 -- "insert" komutunu kullanirim
 -- "insert into talebeler values" diye baslarim
 -- degerleri talebeler tablosunun icine ekle
@@ -64,12 +67,14 @@ insert into talebeler values('12345678975','Mehmet',80.5,'2021-05-16');
 insert into talebeler values('12345678959','Veli',86.4,'2022-02-25');
 
 
+
+***********************************************************************
 -- TEKRAR TALEBELER TABLOSUNDAN BUTUN SUTUNLARDAKİ VERİLERİ LİSTELEYELİM
 -- "select" komutu: tablodaki verileri listele
 select * from talebeler;
 
 
-
+*********************************************
 -- TALEBELER TABLOSUNU BUTUN KODLARLA SİLELİM
 -- 1.yol// talebeler tablosu--> sag tikla-->delete/drop
 -- 2.yol// asagida kodlari kullanarak yaptigim yoldur
@@ -79,7 +84,7 @@ select * from talebeler;
 drop table talebeler;
 
 
-
+****************************************
 -- OGRETMENLER İSMİNDE TABLO OLUSTURALIM
 -- Uzunlugu belli olmayan String datalar icin varchar() data turu kullanılır.
 -- Uzunlugu belli olan String datalar icin char() data turu kullanılır
@@ -96,14 +101,16 @@ maas int
 
 
 
+*******************************************
+-- OGRETMENLER TABLOSUNA VERİ GİRİSİ YAPALİM
+-- size kısmında belirtilen degerden daha fazla yazamam
 
--- OGRETMENLET TABLOSUNA VERİ GİRİSİ YAPALİM
 insert into ogretmenler values('Ali','Matematik','Lisans','12345678952',15000);
 insert into ogretmenler values('Erdem','Edebiyat','Lisans','1234567848',13000);
 insert into ogretmenler values('Haşim','Tarih','Yüksek Lisans','1234567873',20000);
 insert into ogretmenler values('Aylin','Geometri','Lisans','1234567818',18000);
 insert into ogretmenler values('Kubra','Yazılım','Lisans','12345678169',30000);
-insert into ogretmenler values('Burak','Cografya','Yüksek Lisans','123456781578',35000); -- size kısmında belirtilen degerden daha
+insert into ogretmenler values('Burak','Cografya','Yüksek Lisans','123456781578',35000);
 
 
 
@@ -123,103 +130,3 @@ select * from ogretmenler;
 -- OGRETMENLER TABLOSUNU SILELIM
 drop table ogretmenler;
 
-
-
-/*=====================================SELECT=======================================================
-select * from tablo_adi ==> * Tüm sutunlardaki verileri listeler
-
-DQL Grubundan ==> SELECT komutu ile 'Tablodaki İstedigimiz Sütundaki Verileri Listeleyebiliriz'
-
-Syntax:
--------
-
-select sutun_adi from tablo_adi; ==> Sadece belirtilen sutundaki verileri listeler
-
-========================================================================================================*/
-
-
-
-create table ogrenciler
-(
-id int,
-isim varchar(40),
-adres varchar(100),
-sinav_notu int
-);
-
-insert into ogrenciler values(120, 'Ali Can', 'Ankara', 75);
-insert into ogrenciler values(121, 'Veli Mert', 'Trabzon', 85);
-insert into ogrenciler values(122, 'Ayşe Tan', 'Bursa', 65);
-insert into ogrenciler values(123, 'Derya Soylu', 'Istanbul', 95);
-insert into ogrenciler values(124, 'Yavuz Bal', 'Ankara', 85);
-insert into ogrenciler values(125, 'Emre Gül', 'Hatay', 90);
-insert into ogrenciler values(126, 'Harun Reşit', 'Isparta', 100);
-
-
-
---SORU1: ogrenciler tablosunun tum sutunlarındaki verileri listeleyiniz
-select * from ogrenciler;
-
-
---SORU2: ogrenciler tablosundaki 'isim' sutunundaki verileri listeleyiniz
-select isim from ogrenciler;
-
-
---SORU3: ogrenciler tablosundaki 'adres' sutunundaki verileri listeleyiniz
-select adres from ogrenciler;
-
-
---SORU4: ogrenciler tablosundaki 'sinav_notu' sutunundaki verileri listeleyiniz
-select sinav_notu from ogrenciler;
-
-
---SORU5: ogrenciler tablosundaki 'isim' ve 'sinav_notu' sutunundaki verileri listeleyiniz
--- sutun isimlerini yazarken tirnak kullanmayiz
--- birden fazla sutun ismindeki verileri sirala dediginde sutun isimlerini yazar sadece aralarina virgul koyariz
-select isim, sinav_notu from ogrenciler;
-
-
-/*
-WHERE ==> ŞART belirtmemiz gerektiginde kullanılır (sartim var)
--- tablo isminden hemen sonra yazilir
-*/
-
---SORU6: ogrenciler tablosundaki sinav_notu 80'den büyük olan öğrencilerin tüm bilgilerini listele
-select * from ogrenciler where sinav_notu>80;
-
-
---SORU7: ogrenciler tablosundaki adresi 'Ankara' olan ögrencilerin tüm bilgilerini listele
-select * from ogrenciler where adres='Ankara';
-
-
---SORU8: ogrenciler tablosundaki sinav_notu 85 ve adresi 'Ankara' olan öğrenci isimlerini listele
---isim dedigi icin yildiz koymuyorum
---ve dediginde "end" kullanirim
---veya dediginde "or" kullanirim
-select isim from ogrenciler where sinav_notu=85 and adres='Ankara';
-
-
---SORU9: ogrenciler tablosundaki sinav_notu 65 veya 85 olan ogrencilerin tüm bilgilerini listele
-select * from ogrenciler where sinav_notu=65 or sinav_notu=85;
-
-
-
--- 2.YOL
--- in ==> Birden fazla ifade ile tanımlayabilecegimiz durumları "in" komutu ile yazabiliriz
---"sinav_notu" kelimesini normalde iki kere yazmamiz yerine asagidaki gibi kullanabiliriz
-select * from ogrenciler where sinav_notu in(65,85);
-
--- not in komutu yazdıgımız verilerin, dısındaki verileri listeler
---SORU10: .ogrenciler tablosundaki sinav_notu 65 veya 85 olmayan ogrencilerin tüm bilgilerini listele
-select * from ogrenciler where sinav_notu not in(65,85);
-
-
---SORU11: ogrenciler tablosunda sinav_notu 65 ve 85 arasında olan ogrencilerin tüm bilgilerini listele
-select * from ogrenciler where sinav_notu>=65 and sinav_notu<=85;
-
-
--- 2.YOL
--- BETWEEN ==> Belirttigimiz iki veri arasındaki bilgileri BETWEEN komutu ile yazabiliriz.
-select * from ogrenciler where sinav_notu between 65 and 85;
-
---ODEV:.ogrenciler tablosunda sinav_notu 75 ve 90 arasında olmayan ögrencilerin isim'ini ve sinav_notu listele
