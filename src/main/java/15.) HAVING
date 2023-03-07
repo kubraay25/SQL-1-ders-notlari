@@ -1,0 +1,28 @@
+
+/*
+HAVING:
+1) Şart belirtmek icin kullanılır
+2) Group By komutundan sonra yer alır
+3) Where komutundan farkı: Gruplama yaptıktan sonra cıkan sonucta şart kosulacaksa Having komutu kullanılır
+*/
+
+
+--*******
+--SORU08: ulke'lere göre yas ortalamasını bulup, yas ortalaması 30'dan buyuk olanları listeleyiniz.
+select ulke, avg(yas) from insan group by ulke having avg(yas)>30;
+
+select ulke, round(avg(yas)) as yas_ort from insan
+group by ulke
+having avg(yas)>30;
+
+
+
+
+--*******
+--SORU9: ulke'lere göre toplam maası bulup, toplam maas 30000'den buyuk olanları listeleyiniz
+select ulke, sum(maas) from insan group by ulke having sum(maas)>30000;
+
+select ulke, sum(maas) as toplam_maas from insan
+group by ulke
+having sum(maas)>30000;
+
