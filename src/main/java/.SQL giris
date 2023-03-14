@@ -81,6 +81,33 @@
                --> primary key dıs dunyadaki gercek verileri icermiyorsa Surrogate:surroget(vekil) Key deriz
 
 
+              1-Primary Key:İlişkili tablolarda mutlaka primary key olmalıdır.
+              --Bir tabloda her satır için tanımlayıcı görevi görür.
+              --3 yolla primary key oluşturabiliriz
+
+              Create table calisanlar1(
+              id char(4) primary key,--1.yol *******************************************
+              isim varchar(15),
+              soyisim varchar(30),
+              tel varchar(15)
+              );
+
+              select * from calisanlar1
+              Create table calisanlar2(
+              id char(4),
+              isim varchar(15),
+              soyisim varchar(30),
+              tel varchar(15),
+              primary key (id)--2. yol **********************************************
+              );
+
+              Create table calisanlar3(
+              id char(4),
+              isim varchar(15),
+              soyisim varchar(30),
+              tel varchar(15),
+              constraint pk primary key (id)--3. yol **************************************
+              );
 
    İLİSKİLİ TABLOLARLA CALİSMA:  Bire Bir İliskili Olma--> one to one relation
                                  Bire Cok İliskili olma--> one to many relation
@@ -161,22 +188,6 @@ En Cok Kullanilan DBMS'ler: SQL Server
                             PostgreSQL
 
 
-where--> sart belirtmemiz gerektiginde kullanirim (sartim var)
-
-
-
-in --> Birden fazla ifade ile tanımlayabilecegimiz durumları "in" komutu ile yazabiliriz
-   --> in(istenilen degerleri aralarina virgul koyarak yazarim)
-
-
-
-not in --> not in komutu yazdıgımız verilerin, dısındaki verileri listeler
-
-
-
-BETWEEN --> Belirttigimiz iki veri arasındaki bilgileri BETWEEN komutu ile yazabiliriz.
-
-
 
 
 DML Grubundan ==> DELETE komutu Tablodaki Verileri Siler.
@@ -198,7 +209,7 @@ drop column ==> mevcut olan sutunu silerek tabloda güncellemeler yapar
 
 rename column ==> sutunun ismini degistirerek tabloda güncellemeler yapar
               ==> burda hangi ismi degistireceksek eskisi ve gunceli arasina "to"yu koyariz
-              ==> kubra to tuba gibi
+
 
 rename ==> tablonun ismini degistirerek tabloda güncellemeler yapar
        ==> alter table tabloAdi rename to yeni verecegimiz isim

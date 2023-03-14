@@ -31,7 +31,7 @@ select * from film;
 
 
 
--- SORU1: film_no'su 300 olan film'in 
+-- SORU1: film_no'su 300 olan film'in
 --film_ismi'ni 'Recep İvedik' olarak güncelleyeniz.
 
 update film set film_ismi='Recep İvedik' where film_no=300;
@@ -49,7 +49,7 @@ update film set film_turu='Aksiyon';
 select * from film;
 
 
--- SORU3: film_no'su 100 olan film'in 
+-- SORU3: film_no'su 100 olan film'in
 --film_ismi'ni 'Cakallarla Dans' , film_turu'nu 'Komedi' olarak güncelleyiniz.
 
 

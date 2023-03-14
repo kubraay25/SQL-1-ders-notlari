@@ -49,7 +49,7 @@ select min(fiyat) as min_fiyat from arac;
 select sum(fiyat) as toplam_fiyat from arac;
 
 
-*********
+********
 --SORU4 : arac tablosundaki fiyat ortalamalarını listele
 --asagidaki durumda ortalamamiz virgullu cikar
 select avg(fiyat) as ortalama_fiyat from arac;
